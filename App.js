@@ -38,7 +38,7 @@ function List(){
   if (error) return (<Text>{error}</Text>);
 
   return (
-    <View>
+    <View style={styles.containerList}>
       <FlatList
         data={data.data.results}
         renderItem={renderItem}
@@ -63,21 +63,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#15072C',
-    alignItems: 'center',
+  },
+  containerList:{
+    width: '100%',
+    paddingHorizontal: 20,
     justifyContent: 'center'
   },
   containerItem:{
-    width: '90%',
-    backgroundColor: '#2A1154',
     padding: 10,
     margin: 'auto',
     marginBottom: 15,
     borderRadius: 5,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    backgroundColor: '#2A1154',
   },
   containerImgItem:{
-    width: 100,
-    height: 100
+    width: 120,
+    height: 120
   },
   imgItem:{
     width: '100%',
